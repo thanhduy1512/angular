@@ -1,0 +1,36 @@
+<div class="container">
+  <input [(ngModel)]="tenSP" type="text" placeholder="Tên SP" />
+  <input [(ngModel)]="maSP" type="text" placeholder="Mã SP" />
+  <input [(ngModel)]="giaSP" type="text" placeholder="Giá" />
+  <button (click)="onCreateProduct()" class="btn btn-success">
+    Thêm sản phẩm
+  </button>
+</div>
+
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Mã SP</th>
+        <th>Tên SP</th>
+        <th>Giá SP</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of productList | paginate: { itemsPerPage: 3, currentPage: page }; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ prod.MaSP }}</td>
+        <td>{{ prod.TenSP }}</td>
+        <td>{{ prod.Gia }}</td>
+        <td>
+          <button click="onDeleteProduct(prod.MaSP)" class="btn btn-danger">
+            Xoá
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

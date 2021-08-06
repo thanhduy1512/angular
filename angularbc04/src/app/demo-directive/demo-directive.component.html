@@ -1,0 +1,109 @@
+<!-- <p>demo-directive works!</p>
+
+<p *ngIf="isSick; else elseCondition">GO TO CYBERCORE</p>
+
+<ng-template #elseCondition>
+  <p>GO TO CYBERSOFT</p>
+</ng-template>
+
+<button (click)="onFeel(true)">FEEL SICK</button>
+<button (click)="onFeel(false)">FEEL GOOD</button>
+
+<select [(ngModel)]="month" class="d-block mt-5">
+  <option value="0">Chọn tháng</option>
+
+  <option *ngFor="let item of monthOptions" [value]="item.value">
+    {{ item.label }}
+  </option>
+</select>
+
+<div [ngSwitch]="month">
+  <p *ngSwitchCase="1">Tháng 1 có 31 ngày</p>
+  <p *ngSwitchCase="2">Tháng 2 có 28 ngày</p>
+  <p *ngSwitchCase="3">Tháng 3 có 31 ngày</p>
+  <p *ngSwitchCase="4">Tháng 4 có 30 ngày</p>
+  <p *ngSwitchDefault>Vui lòng chọn tháng hợp lệ</p>
+</div> -->
+
+<!-- <nav class="navbar navbar-expand navbar-light bg-light">
+  <div class="nav navbar-nav">
+    <a class="nav-item nav-link active" href="#"
+      >Home <span class="sr-only">(current)</span></a
+    >
+    <a
+      *ngIf="!isLogin"
+      class="nav-item nav-link"
+      data-toggle="modal"
+      data-target="#modelId"
+      href="#"
+      >Login</a
+    >
+    <a *ngIf="isLogin" class="nav-item nav-link" href="#">{{ username }}</a>
+  </div>
+</nav> -->
+
+<!-- Modal -->
+<!-- <div
+  class="modal fade"
+  id="modelId"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modelTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="">Username</label>
+          <input
+            type="text"
+            name=""
+            id=""
+            [(ngModel)]="username"
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name=""
+            id=""
+            class="form-control"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button (click)="onLogin()" type="button" class="btn btn-primary">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<ng-container *ngIf="isLogin">
+  <p *ngFor="let item of monthOptions">
+    {{ item.label }}
+  </p>
+</ng-container>
+
+<ng-content></ng-content>

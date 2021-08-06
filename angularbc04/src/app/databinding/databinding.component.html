@@ -1,0 +1,26 @@
+<!-- INTERPOLATION -->
+<!-- <h1>Name: {{ fullName }}</h1>
+<h1>Age: {{ age }}</h1> -->
+<!-- Property binding -->
+<!-- <input type="text" [value]="email" /> -->
+
+<!-- <img class="w-50 d-block" [src]="avatar" /> -->
+
+<!-- event binding -->
+<!-- <button (click)="showMessage('hello')" class="btn btn-success">
+  Show message
+</button>
+
+<button (click)="increaseAge()">Increase age</button>
+
+<input type="text" [(ngModel)]="email" />
+{{ email }} -->
+
+<!-- local reference -->
+
+<input type="email" [(ngModel)]="email" placeholder="email" />
+<input #fullNameInpput type="text" placeholder="fullname" />
+<button (click)="setName(fullNameInpput.value)">Submit</button>
+
+<p>Email: {{ email }}</p>
+<p>FullName: {{ fullName }}</p>

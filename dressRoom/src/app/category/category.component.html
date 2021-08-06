@@ -1,0 +1,6 @@
+<div class="btn-group container-fluid mb-4">
+  <button [ngClass]="{'btn-success' : cate.type===selectedCategory}" (click)="onSelectCategory(cate.type)"
+    *ngFor="let cate of categoryList" class="btn btn-secondary">
+    {{cate.showName}}
+  </button>
+</div>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-7">
+            <h4>Danh Sách Ghế</h4>
+            <div class="row">
+                <div class="m-3" *ngFor="let seat of seatList">
+                    <app-seat-item (seatEmiter)="onSelect($event)" [seat]="seat"></app-seat-item>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <h4>Danh Sách Ghế Đã Đặt</h4>
+            <p *ngFor="let seat of bookingList">Ghế: {{seat.TenGhe}} ${{seat.Gia}} <span (click)="onCancel(seat.SoGhe)"
+                    class="text-danger">Hủy</span>
+            </p>
+        </div>
+    </div>
+</div>
